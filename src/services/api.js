@@ -1,4 +1,3 @@
-
 export const fetchPlatosChilenos = async () => {
   try {
     const response = await fetch(
@@ -7,7 +6,7 @@ export const fetchPlatosChilenos = async () => {
     if (!response.ok) throw new Error('Error al obtener los datos');
     const data = await response.json();
     return data.meals || [];
-  } catch (error) {
-    console.error(error);
+  }   catch (error) {
+    console.error('Error al obtener los platos chilenos:', error);
     return [];
-  }} 
+  }  }
